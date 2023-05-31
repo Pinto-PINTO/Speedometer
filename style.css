@@ -1,0 +1,139 @@
+:root{
+  --container-width:700px;
+  --container-height:700px;
+  --meter-scale:1;
+}
+
+
+@font-face {
+  font-family: "trebuc";
+  src: url("./trebuc.ttf");
+}
+
+*{
+  font-family:"trebuc";
+  color: #D1D4DC;
+  font-weight: normal;
+}
+
+.speedometer-container{
+  background-color: #1E222D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:var(--container-width);
+  height:var(--container-height);
+}
+
+.title{
+  position: absolute;
+  top: 30px;
+  font-size: 20px;
+}
+
+.speedometer {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+  transform: scale(var(--meter-scale));
+}
+
+.speedometer-background {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-image:radial-gradient(#f4433600,#f443361c, #f443365b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speedometer-background-hide{
+  position: absolute;
+  width: 400px;
+  height: 125px;
+  background-color: #1E222D;
+  bottom:0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 20px 10px #1E222D;
+}
+
+.status-txt{
+  font-size: 23px;
+  color: #787B86;
+  text-transform: uppercase;
+}
+
+.speedometer-needle {
+  position: absolute;
+  bottom: 125px;
+  left: 50%;
+  width: 2px;
+  height: 110px;
+  background-color: #B7BBC7;
+  transform-origin: bottom center;
+  transform: rotate(0deg) translateX(-50%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+  border-radius: 15px;
+
+}
+
+.speedometer-center{
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: solid 2px #B7BBC7;
+  background-color: #1e222d;
+  outline: solid 7px #1E222D;
+  z-index: 2;
+}
+
+.speedometer-ranges{
+  position: absolute;
+  width: 264px;
+  height: 264px;
+  bottom: -7px;
+  background-image: url("./ranges.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.range-text{
+  font-size: 10px;
+  position:absolute;
+  text-transform: uppercase;
+}
+
+.range-text-1{
+  left: 27px;
+  top: 220px;
+}
+
+.range-text-2{
+  left: 85px;
+  top: 155px;
+}
+
+.range-text-3{
+  left: 50%;
+  top: 122px;
+  transform: translateX(-50%);
+}
+
+.range-text-4{
+  right: 85px;
+  top: 155px;
+}
+
+.range-text-5{
+  right: 27px;
+  top: 220px;
+}
