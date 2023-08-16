@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Speedometer/FileContentIndex/9a5f32cd-d64b-4cd1-8830-1ecf020c0840.vsidx
+/.vs/Speedometer/v17/.wsuo
+/.vs/Speedometer/FileContentIndex/c64fee0c-54fc-4628-9749-ff28798ef462.vsidx
+/.vs/slnx.sqlite
+/.vs/Speedometer/FileContentIndex
+/.vs/VSWorkspaceState.json
